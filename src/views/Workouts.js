@@ -37,7 +37,7 @@ export default class Workouts extends Component {
                         (item, index) =>{
                             return <li className="list-group-item" key={index}>
                                 {item}
-                                <button className="btn btn-sm btn-outline-success justify-content-md-end" onClick={(event) => {this.deleteTodoTask(event,index)}}>Task Completed</button>
+                                <button className="btn btn-sm btn-outline-success float-end" onClick={(event) => {this.deleteTodoTask(event,index)}}>Task Completed</button>
                             </li>
                         }
                     )
