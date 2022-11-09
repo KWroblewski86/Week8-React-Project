@@ -34,3 +34,30 @@ code {
   max-width: 100%;
   height: auto;
 }
+
+.workout h1 {
+  font-size: 60px;
+  margin-bottom: 30px;
+  background-color: gainsboro;
+  
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  position: relative;
+  left: 500px;
+}
+
+.list-group-item {
+  max-width: 500px;
+  position: relative;
+  left: 500px;
+}
+
