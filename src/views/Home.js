@@ -4,7 +4,6 @@ export default class Home extends Component {
     constructor() {
         super();
         this.state ={
-          user: null,
           workout_enthusiasts: 0,
           name: 'Kyle',
           age: 25
@@ -28,7 +27,7 @@ render() {
     
     return (
         <div>
-            <h1 className>Hey There Workout Enthusiasts</h1>
+            <h1>Hey There Workout Enthusiasts</h1>
             <h3>My name is {this.state['name']} and I'm {this.state.age} </h3>
             <h4>Give this button a click if you're a workout enthusiast!</h4>
             <p>Here is our number of workout enthusiats {this.state['workout_enthusiasts']} </p>

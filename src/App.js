@@ -9,7 +9,23 @@ import Workouts from './views/Workouts';
 
 
 export default class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      user: {},
+      message: {}
+    }
+  }
+
+  logMeIn = (user) => {
+    this.setState({
+      user: user
+    })
+  };
   
+  addMessage = (msg, category) => {
+    this.setState({message: {message: msg, category: category}})
+  };
 
   render() {
     
@@ -17,13 +33,13 @@ export default class App extends Component {
     return (
 
       <Router>
-        <div className="homepage">
+        <div>
           <Nav/>
-
+          <p className={`bg-${this.state.message.category}`}>{this.state.message.message}</p>
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/signup' element={<Signup />} />
+            <Route path='/login' element={<Login logMeIn={this.logMeIn} addMessage={this.addMessage}/>} />
+            <Route path='/signup' element={<Signup addMessage={this.addMessage}/>} />
             <Route path='/workouts' element={<Workouts />} />
 
 
@@ -35,8 +51,7 @@ export default class App extends Component {
           </Routes>
 
 
-
-        </div>
+          </div>
       </Router>
     )
   }
